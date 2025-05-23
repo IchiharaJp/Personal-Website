@@ -1,0 +1,109 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: darkblue;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "head"
+        "main"
+        "foot";
+    background: #ECE9E6; 
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6); 
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); 
+    margin: 0 15em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    grid-area: head;
+}
+#nav_menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+    height: 4em;
+}
+#nav_menu ul li {
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid white;
+}
+#nav_menu ul li:last-child { border-right: none; }
+#nav_menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    "sec"
+    "resume"
+    "project"
+    "about"
+    "contact";
+}
+main {
+    margin: auto;
+    text-align: center;
+}
+
+main div {
+    padding-bottom: 2em;
+    width: 70%;
+    margin: auto;
+    font-size: 110%;
+    line-height: 1.5em;
+}
+main div p, main div ul {
+    max-width: 65ch;
+    text-align: left;
+}
+main div p {
+    margin: 1em;
+}
+main div h2 {
+    border-bottom: 2px solid black;
+    margin: 1em 0 2em 0;
+    padding-bottom: 0.3em;
+}
+main div#contact {
+    text-align: center;
+}
+
+main h1 {
+    font-size: 220%;
+    padding: 1em;
+}
+main img {
+    max-width: 17em;
+    border-radius: 6em;
+}
+h2 {
+    font-size: 150%;
+}
+
+section {
+    grid-area: sec;
+}
+footer {
+    grid-area: foot;
+    text-align: center;
+    height: 3em;
+    background-color: grey;
+}
+footer p {
+    padding: 1em;
+    color: white;
+}
