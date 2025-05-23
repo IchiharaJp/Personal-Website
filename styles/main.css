@@ -1,34 +1,38 @@
-
+/* Stylesheet May 23 Fri 2025 Jinil Park */
 * {
     margin: 0;
     padding: 0;
 }
-
 html {
-    background-color: darkblue;
+    background-image: url("../images/rain_background.gif");
+    background-attachment: fixed;
 }
-
 body {
+    position: relative;
     display: grid;
     grid-template-areas: 
         "head"
         "main"
         "foot";
-    background: #ECE9E6; 
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6); 
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6); 
+    /* background: linear-gradient(to right, #FFFFFF, #ECE9E6);  */
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 2em;
     margin: 0 15em;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 header {
     grid-area: head;
+}
+#nav_menu {
+    background: linear-gradient(to right, #134e5e, #71b280);
+    border-bottom: 1px double black;
 }
 #nav_menu ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: grey;
     height: 4em;
 }
 #nav_menu ul li {
@@ -43,25 +47,24 @@ header {
     font-size: 110%;
     font-weight: bold;
 }
+#nav_menu ul li a:hover, div a:hover{
+    font-size: 130%;
+}
+a {
+    transition: font-size 0.7s;
+}
+
 
 main {
     grid-area: main;
-    display: grid;
-    grid-template-areas: 
-    "sec"
-    "resume"
-    "project"
-    "about"
-    "contact";
-}
-main {
+    display: flex;
+    flex-direction: column;
     margin: auto;
     text-align: center;
 }
-
 main div {
     padding-bottom: 2em;
-    width: 70%;
+    width: 80%;
     margin: auto;
     font-size: 110%;
     line-height: 1.5em;
@@ -71,17 +74,14 @@ main div p, main div ul {
     text-align: left;
 }
 main div p {
-    margin: 1em;
+    margin: 1em 0;
 }
 main div h2 {
     border-bottom: 2px solid black;
-    margin: 1em 0 2em 0;
+    margin: 1em 0 1em 0;
     padding-bottom: 0.3em;
+    font-size: 150%;
 }
-main div#contact {
-    text-align: center;
-}
-
 main h1 {
     font-size: 220%;
     padding: 1em;
@@ -90,20 +90,31 @@ main img {
     max-width: 17em;
     border-radius: 6em;
 }
-h2 {
-    font-size: 150%;
+main div h3 {
+    margin-top: 2em;
+}
+main div ul {
+    list-style-type: square;
+}
+main div ul li {
+    margin-top: 0.3em;
 }
 
-section {
-    grid-area: sec;
-}
 footer {
+    position: absolute;
     grid-area: foot;
-    text-align: center;
     height: 3em;
-    background-color: grey;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 footer p {
+    position: absolute;
     padding: 1em;
     color: white;
+    font-size: 80%;
+}
+footer p:last-child {
+    position: relative;
+    left: 55%;
 }
