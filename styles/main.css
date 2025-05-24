@@ -17,7 +17,7 @@ body {
     /* background: linear-gradient(to right, #FFFFFF, #ECE9E6);  */
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 2em;
-    margin: 0 15em;
+    margin: 0 20%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -25,7 +25,7 @@ header {
     grid-area: head;
 }
 #nav_menu {
-    background: linear-gradient(to right, #134e5e, #71b280);
+    background: linear-gradient(to right, #141e30, #243b55);
     border-bottom: 1px double black;
 }
 #nav_menu ul {
@@ -52,6 +52,11 @@ header {
 }
 a {
     transition: font-size 0.7s;
+}
+.slicknav_menu {
+    display: none;
+    grid-area: head;
+    background: linear-gradient(to right, #141e30, #243b55) !important;
 }
 
 
@@ -117,4 +122,60 @@ footer p {
 footer p:last-child {
     position: relative;
     left: 55%;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1104px) {
+    #nav_menu ul {
+        display: none;
+    }
+    .slicknav_menu {
+        display: block;
+    }
+    footer {
+        font-size: 80%;
+    }
+    footer p {
+        background-color: rgba(1, 1, 1, 0.5);
+        border-radius: 1em;
+    }
+
+}
+@media only screen and (max-width: 970px) {
+    body {
+       margin: 0 15%;
+    }
+    footer p:last-child {
+        left: 50%
+    }
+}
+@media only screen and (max-width: 820px) {
+    body {
+        margin: 0 10%;
+    }
+    footer p:last-child {
+        left: 40%
+    }
+    footer p {
+        font-size: 0.7em;
+    }
+}
+@media only screen and (max-width: 730px) {
+    body {
+        margin: 0 5%;
+    }
+    main {
+        font-size: 90%;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1em;
+    }
+    footer p {
+        position: static;
+    }
+    footer p:last-child {
+        left: 0;
+    }
 }

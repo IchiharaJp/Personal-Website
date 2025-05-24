@@ -6,6 +6,18 @@
     <meta name="description" content="Showcases Jinil's resume and his projects">
     <link rel="stylesheet" href="styles/main.css">
     <title>Jinil Park</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="SlickNav/dist/slicknav.min.css" />
+    <script src="SlickNav/dist/jquery.slicknav.min.js"></script>
+    <script>
+	    $(function(){
+		    $('#nav_menu').slicknav({
+	        label: '',
+    	    duration: 1000,
+    	    prependTo:'#mobile_menu'
+}       );
+	    });
+    </script>
 </head>
 <body>
     <header>
@@ -17,10 +29,11 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <nav id="mobile_menu"></nav>
     </header>
     <main>
         <section>
-        <h1>Jinil Park+</h1>
+        <h1>Jinil Park</h1>
         <img src="images/Jinil.PNG" alt="Image of Jinil">
         </section>
         <div id="resume">
